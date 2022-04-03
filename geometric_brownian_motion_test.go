@@ -1,10 +1,13 @@
 package go_timeseries_generator
 
-import "testing"
+import (
+	"github.com/lmpizarro/go_timeseries_generator"
+	"testing"
+)
 
 func TestGeometricBrownianMotion(t *testing.T) {
-	vals := GeometricBrownianMotionDefault(1024)
-	err := Plt(vals, "img/geometric_brownian_motion.png")
+	vals := go_timeseries_generator.GeometricBrownianMotionDefault(1024)
+	err := go_timeseries_generator.Plt(vals, "img/geometric_brownian_motion.png")
 	if err != nil {
 		t.Error(err)
 	}

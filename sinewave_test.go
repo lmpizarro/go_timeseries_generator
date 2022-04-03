@@ -2,14 +2,15 @@ package go_timeseries_generator
 
 import (
 	"fmt"
+	"github.com/lmpizarro/go_timeseries_generator"
 	"testing"
 )
 
 func TestSineWave(t *testing.T) {
-	sine := SineWave(1024)
+	sine := go_timeseries_generator.SineWave(1024)
 
 	filename := fmt.Sprintf("img/sinewave.png")
-	err := Plt(sine, filename)
+	err := go_timeseries_generator.Plt(sine, filename)
 	if err != nil {
 		t.Error(err)
 	}
